@@ -1,7 +1,8 @@
 #pragma once
 
 #include "GameFramework/HUD.h"
-//#include "GameFramework/Widget.h"
+#include "Components/Widget.h"
+//#include "Blueprint/UserWidget.h"
 
 #include "TTHUD.generated.h"
 
@@ -10,9 +11,12 @@ class ATTHUD : public AHUD
 {
 	GENERATED_BODY()
 
+public:
+
 	ATTHUD(const FObjectInitializer& ObjectInitializer);
 
 private:
-	/*UPROPERTY(EditDefaultsOnly)
-	UWidget* HUDWidget;*/
+
+	UPROPERTY()
+	UWidget* HUDWidget;
 };
